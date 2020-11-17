@@ -1,0 +1,74 @@
+<!Doctype html>
+    <html>
+        <head>
+            <meta charset="UTF-8" />
+            <title>KiSabor delivery</title>
+            <meta name="viewport"  content="width=device-width, initial-scale=1.0" />
+            <link rel="stylesheet" href="css/index.css" />
+        </head>
+        <body>
+            <div id="app">
+                <h1>KiSabor delivery</h1>
+                <ul>
+                    <li v-for="item in items">
+                        <h3>{{ item['fields']['Item'] }}</h3>
+                        <p>{{ item['fields']['Descricao'] }}</p>
+                        <p><strong>Preço: </strong>R$ <span>{{ item['fields']['Preco'] }}</span></p>
+                        <p><strong>Categoria: </strong>{{ item['fields']['Categoria'] }}</p>
+                        <img :src="item['fields']['Foto'][0]['thumbnails']['large']['url']" alt="" v-if="item['fields']['Foto']" width="150">
+                        <p><input type="checkbox">Adicionar</p>
+                        <p>Quantidade: <input type="number" min="1" max="10" step="1" value="0" required></p>
+                    </li>
+                </ul>            
+            </div><!--app-->
+
+            <script type="text/javascript" src="js/vue.js"></script>
+            <script type="text/javascript" src="js/axios.min.js"></script>
+
+            <script type="text/javascript">
+                var app = new Vue({
+                    el: '#app',
+                    data: {
+                        items: []
+                    },
+                    mounted: function(){
+                    this.loadItems(); 
+                    },
+                    methods: {
+                        loadItems: function(){
+                            
+                            // Init variables
+                            var self = this
+                            this.items = axios.get(
+                                "https://api.airtable.com/v0/app5RwooVnqX8GzHG/Cardapio?view=Grid%20view",
+                                { 
+                                    headers: { Authorization: "Bearer keyiX1jGxgOZWSbYJ" }
+                                }
+                            ).then(function(response){
+                                self.items = response.data.records
+                            }).catch(function(error){
+                                console.log(error)
+                            })
+                        }
+                    }
+                })
+            </script>
+
+            <div id="pedido">
+                <h2>Faça o seu pedido!</h2>
+                Digite o número do seu telefone: <input type="tel" id="telefone" pattern="[0-9]{9}" required>
+                <button id="verificarcadastro" type="button">OK</button>
+                <div id="dadospedido" style="display:none;">
+                <br />
+                Seu nome: <input type="text" id="nome" disabled="false" minlength="2" maxlength="26" style="width:240px" required><br />
+                Endereço de entrega: <input type="text" id="endereco" disabled="false" minlength="2" maxlength="95" style="width:320px" required><br />
+                Seu pedido: <button id="preencherpedido" type="button">Preencher</button><br /><textarea rows="6" cols="46" id="itenspedido" disabled="true"></textarea><br />
+                </div>
+                <button id="apagar" type="button" style="display:none;">Apagar campos</button><button id="enviarpedido" type="button" style="display:none;">Enviar</button>
+                <p id="msgenviado"></p>
+            </div>
+            
+            <script type="text/javascript" src="js/airtable.browser.js"></script>
+            <script type="text/javascript" src="js/index.js"></script>
+        </body>
+    </html>
