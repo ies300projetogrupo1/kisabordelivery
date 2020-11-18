@@ -17,10 +17,12 @@ function preencherCampoPedido() {
     }
     if (precototal != 0) {
         document.getElementById("itenspedido").value += `Total: R$ ${precototal.toFixed(2)}`;
+        document.getElementById("itenspedido").style.display = "block";
         document.getElementById("enviarpedido").style.display = "inline";
     }
     else {
         document.getElementById("enviarpedido").style.display = "none";
+        document.getElementById("itenspedido").style.display = "none";
     }
 }
 
@@ -117,6 +119,7 @@ function apagarcampos() {
     document.getElementById("endereco").disabled = false;
     document.getElementById("itenspedido").value = "";
     document.getElementById("enviarpedido").style.display = "none";
+    document.getElementById("itenspedido").style.display = "none";
     document.getElementById("telefone").value = "";
     document.getElementById("telefone").disabled = false;
     document.getElementById("verificarcadastro").style.display = "inline";
