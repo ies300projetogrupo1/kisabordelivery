@@ -1,8 +1,8 @@
 h1 {
     text-align: center;
-    
     font-size: 60px;
 }
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -10,10 +10,10 @@ ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
     background-color: #ffb11b;
     border-radius: 50px;
 }
+
 li {
     width: 250px;
     background: #88dfee;
@@ -37,10 +37,10 @@ li, img {
 
 #pedido {
     margin: auto;
-    width: 60%;
+    width: 80%;
     padding: 15px;
     justify-content: center;
-    background: greenyellow;
+    background: #fffacd;
     flex-wrap: wrap;
     text-align: justify;
 }
