@@ -21,8 +21,12 @@ li {
     padding: 15px;
     text-align: center;
     margin: 50px;
+    background: #ffc935;
+    transition: background-color 1s;
+}
 
-    background: #f0e68c;
+li:hover {
+    background-color: #f0e68c;
 }
 
 body {
