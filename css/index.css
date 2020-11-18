@@ -2,6 +2,7 @@ h1 {
     text-align: center;
     font-size: 60px;
     font-family: 'Satisfy';
+    cursor: default;
 }
 
 ul {
@@ -13,6 +14,7 @@ ul {
     flex-wrap: wrap;
     background-color: #ffb11b;
     border-radius: 50px;
+    cursor: default;
 }
 
 li {
@@ -39,6 +41,7 @@ body {
 li, img {
     border-style: double;
     border-color: black;
+    cursor: default;
 }
 
 #pedido {
