@@ -1,0 +1,46 @@
+h1 {
+    text-align: center;
+    
+    font-size: 60px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    background-color: #ffb11b;
+    border-radius: 50px;
+}
+li {
+    width: 250px;
+    background: #88dfee;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    margin: 50px;
+
+    background: #f0e68c;
+}
+
+body {
+    margin-top: 30px;
+    background-color: #fffacd;
+}
+
+li, img {
+    border-style: double;
+    border-color: black;
+}
+
+#pedido {
+    margin: auto;
+    width: 60%;
+    padding: 15px;
+    justify-content: center;
+    background: greenyellow;
+    flex-wrap: wrap;
+    text-align: justify;
+}
