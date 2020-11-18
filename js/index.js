@@ -27,7 +27,6 @@ function preencherCampoPedido() {
 preencherpedido.onclick = function() {preencherCampoPedido();}
 
 verificarcadastro.onclick = function() {
-    alert("ok");
     if (document.getElementById("telefone").checkValidity()) {
         base('Cliente').select({
             filterByFormula: "({Telefone} = " + document.getElementById("telefone").value + ")"
