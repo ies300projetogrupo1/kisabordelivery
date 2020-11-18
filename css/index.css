@@ -53,4 +53,5 @@ li, img {
     flex-wrap: wrap;
     text-align: justify;
     font-family: 'Sofia';
+    cursor: default;
 }
