@@ -59,14 +59,14 @@
 
             <div id="pedido">
                 <h2>Faça o seu pedido!</h2>
-                Primeiro digite o número do seu telefone: <input type="tel" id="telefone" pattern="[0-9]{9}" style="width:104px" oninput="setCustomValidity(''); checkValidity(); setCustomValidity(validity.valid ? '' : 'Digite um número de 9 dígitos.'); this.reportValidity();" onmouseover="setCustomValidity(' '); checkValidity();" required>
+                Primeiro digite o número do seu telefone: <input type="tel" id="telefone" pattern="[0-9]{9}" style="width:104px" oninput="setCustomValidity(''); checkValidity(); setCustomValidity(validity.valid ? '' : 'Digite um número de 9 dígitos.'); this.reportValidity();" onmouseover="setCustomValidity(' '); checkValidity();" onmouseout="setCustomValidity(''); checkValidity(); setCustomValidity(validity.valid ? '' : 'Digite um número de 9 dígitos.'); this.reportValidity();" required>
                 <button id="verificarcadastro" type="button">OK</button>
                 <div id="dadospedido" style="display:none;">
                     <br />
                     Seu nome:<br />
-                    <input type="text" id="nome" disabled="false" minlength="2" maxlength="26" style="width:385px" oninput="setCustomValidity(''); checkValidity(); setCustomValidity(validity.valid ? '' : 'Nome muito curto.'); this.reportValidity();" onmouseover="setCustomValidity(' '); checkValidity();" required><br />
+                    <input type="text" id="nome" disabled="false" minlength="2" maxlength="26" style="width:385px" oninput="setCustomValidity(''); checkValidity(); setCustomValidity(validity.valid ? '' : 'Nome muito curto.'); this.reportValidity();" onmouseover="setCustomValidity(' '); checkValidity();" onmouseout="setCustomValidity(''); checkValidity(); setCustomValidity(validity.valid ? '' : 'Nome muito curto.'); this.reportValidity();" required><br />
                     Endereço de entrega:<br />
-                    <input type="text" id="endereco" disabled="false" minlength="2" maxlength="95" style="width:385px" oninput="setCustomValidity(''); checkValidity(); setCustomValidity(validity.valid ? '' : 'Endereço muito curto.'); this.reportValidity();" onmouseover="setCustomValidity(' '); checkValidity();" required><br /><br />
+                    <input type="text" id="endereco" disabled="false" minlength="2" maxlength="95" style="width:385px" oninput="setCustomValidity(''); checkValidity(); setCustomValidity(validity.valid ? '' : 'Endereço muito curto.'); this.reportValidity();" onmouseover="setCustomValidity(' '); checkValidity();" onmouseout="setCustomValidity(''); checkValidity(); setCustomValidity(validity.valid ? '' : 'Endereço muito curto.'); this.reportValidity();" required><br /><br />
                     Agora selecione os itens no cardápio acima e clique em Preencher.<br />
                     Seu pedido: <button id="preencherpedido" type="button">Preencher</button><br />
                     <textarea rows="6" cols="46" id="itenspedido" disabled="true" style="display:none;"></textarea>
