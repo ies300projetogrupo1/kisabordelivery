@@ -1,0 +1,81 @@
+h1 {
+    text-align: center;
+    font-size: 70px;
+    font-family: 'Satisfy';
+    cursor: default;
+    color: #fce3b3;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+ul {
+    list-style-type: none;
+    margin: 46px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #f2a848;
+    border-radius: 50px;
+    cursor: default;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+}
+
+li {
+    width: 250px;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    margin: 50px;
+    background-color: #fdfcfe;
+    transition: background-color 1s;
+    font-family: 'Sofia';
+    color: rgb(34, 28, 28);
+    transition: transform .2s;
+}
+
+li:hover {
+    -ms-transform: scale(1.07); /* IE 9 */
+    -webkit-transform: scale(1.07); /* Safari 3-8 */
+    transform: scale(1.07); 
+}
+
+body {
+    margin-top: 30px;
+    background-color: #fe9a28;
+    cursor: default;
+}
+
+li, img {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+    cursor: default;
+}
+
+#pedido {
+    margin: auto;
+    width: 60%;
+    padding: 15px;
+    justify-content: center;
+    background: #fdfcfe;
+    flex-wrap: wrap;
+    text-align: justify;
+    font-family: 'Sofia';
+    cursor: default;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+    color: rgb(34, 28, 28);
+}
+
+h3, h2 {
+    font-family: 'Lobster';
+    color: #c53232;
+}
+
+#msgenviado {
+    font-family: 'Lobster';
+}
+
+@media all and (max-width: 650px) {
+    #nome, #endereco, #itenspedido {
+        max-width: 180px;
+    }
+}
